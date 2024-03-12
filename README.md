@@ -69,11 +69,11 @@ sftp -oPort=   user@ip
 
 ### B.3.2. 下载hfd
 
-[](https://github.com/EuterpeK/hfd-woca/blob/main/hfd.sh)
+[官方的hfd](https://github.com/EuterpeK/hfd-woca/blob/main/hfd.sh)
 
 注意：因为aria2 1.1.0版本之后都会检查CA证书，这一块本人不懂，为了避免麻烦就不认证。但是官方hfd使用aria2时需要认证，因此，对官方的hfd进行更新，添加 `--check-certificate=false` 
 
-1. 下载 hdf-woca: `wget https://[raw.githubusercontent.com/EuterpeK/hfd-woca/main/hfd.sh](http://raw.githubusercontent.com/EuterpeK/hfd-woca/main/hfd.sh)`
+1. 下载 hdf-woca: `wget https://raw.githubusercontent.com/EuterpeK/hfd-woca/main/hfd.sh`
 2. 更改权限并配置
     
     ```bash
