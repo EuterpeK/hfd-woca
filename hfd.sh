@@ -46,6 +46,7 @@ while [[ $# -gt 0 ]]; do
     case $1 in
         --include) INCLUDE_PATTERN="$2"; shift 2 ;;
         --exclude) EXCLUDE_PATTERN="$2"; shift 2 ;;
+        --save_dir) SAVE_DIR="$2"; shift 2 ;;
         --hf_username) HF_USERNAME="$2"; shift 2 ;;
         --hf_token) HF_TOKEN="$2"; shift 2 ;;
         --tool) TOOL="$2"; shift 2 ;;
@@ -134,3 +135,11 @@ for url_file in "${urls[@]}"; do
 done
 
 printf "${GREEN}Download completed successfully.\n${NC}"
+
+
+# printf "${GREEN}${MODEL_DIR}\n"
+
+# Save the model to the specified directory
+cd ../
+mkdir -p "$SAVE_DIR"
+mv ./$MODEL_DIR $SAVE_DIR
