@@ -51,14 +51,14 @@
     source ~/.bashrc
     ```
     
-3. 下载模型 `./hfd.sh repo_id --tool aria2c -x 4`
-    
+3. 下载模型 
     ```bash
-    ./hfd.sh repo_id --tool aria2c -x 4
+    ./hfd.sh repo_id --save_dir dir_name --tool aria2c -x 4
     
     # 解析
     --tool使用的工具：默认是wget
     -x 表示多少线程
+    --save_dir 表示存储的目录名字，默认为模型名字
     ```
 
 
