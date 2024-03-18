@@ -34,6 +34,8 @@ EOF
     exit 1
 }
 
+
+
 MODEL_ID=$1
 shift
 
@@ -140,6 +142,12 @@ printf "${GREEN}Download completed successfully.\n${NC}"
 # printf "${GREEN}${MODEL_DIR}\n"
 
 # Save the model to the specified directory
+
+if [ ! $SAVE_DIR ]; then
+    exit 0
+    # $SAVE_DIR = $MODEL_DIR
+fi
+
 cd ../
 mkdir -p "$SAVE_DIR"
 mv ./$MODEL_DIR $SAVE_DIR
